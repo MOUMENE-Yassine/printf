@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 			cdt = 1;
 		else if (cdt == 1)
 		{
-			r = handle_specifier(format + i, va);
+			r = handle_specifier(format + i, ap);
 			len += r < 0 ? write(1, &c, 1)
 			  + (format[i] == c ? 0 : write(1, format + i, 1)) : r;
 			cdt = 0;
