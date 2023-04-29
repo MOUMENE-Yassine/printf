@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	char c = '%';
 
-	va_start(va, format);
+	va_start(ap, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == c && cdt == 0)
